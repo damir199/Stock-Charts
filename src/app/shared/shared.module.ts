@@ -6,7 +6,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoginComponent } from '../auth/login/login.component';
 import { RouterModule } from '@angular/router';
 
-import { MatCard } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -40,7 +39,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatMenuModule,
     MatListModule,
     MatInputModule,
-    MatCard,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
@@ -50,7 +48,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoginComponent
     
   ]
 })
