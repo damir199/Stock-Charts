@@ -17,7 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -40,7 +40,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatListModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule,
     RouterModule,
   
 
