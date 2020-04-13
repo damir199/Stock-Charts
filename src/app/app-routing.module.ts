@@ -8,17 +8,17 @@ import { ChartsComponent } from './components/charts/charts.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 
 
-const routes: Routes = [{
-  path:'',
-  component: DefaultComponent,
-  children: [{
-    path: '',
-    component: DashboardComponent
-  },
+const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
-
+  },{
+  path:'',
+  component: DefaultComponent,
+  children: [
+    {
+    path: '',
+    component: DashboardComponent
   },
   {
     path: 'profile',
@@ -34,7 +34,7 @@ const routes: Routes = [{
     path: 'accounts',
     component: AccountsComponent
 
-  }
+  },
 ]
 
 }];
