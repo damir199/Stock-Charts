@@ -10,9 +10,6 @@ import { AccountsComponent } from './components/accounts/accounts.component';
 
 const routes: Routes = [
   {
-    path: 'login',
-    component: LoginComponent
-  },{
   path:'',
   component: DefaultComponent,
   children: [
@@ -37,6 +34,10 @@ const routes: Routes = [
   },
 ]
 
+},
+{
+  path: 'login',
+  component: LoginComponent
 }];
 
 @NgModule({

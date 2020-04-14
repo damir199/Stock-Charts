@@ -6,6 +6,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoginComponent } from '../auth/login/login.component';
 import { RouterModule } from '@angular/router';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -41,6 +43,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     RouterModule,
+    MatProgressSpinnerModule,
+    MatCardModule
   
 
   ],

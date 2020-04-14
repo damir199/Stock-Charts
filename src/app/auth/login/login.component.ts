@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isLoading = false;
   onLogin(form: NgForm){
     console.log(form.value)
   }
