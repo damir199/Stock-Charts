@@ -6,6 +6,8 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
+import { registerLocaleData } from '@angular/common';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,11 @@ const routes: Routes = [
 {
   path: 'login',
   component: LoginComponent
+},
+{
+  path: 'register',
+  component: RegisterComponent
+
 }];
 
 @NgModule({

@@ -18,8 +18,9 @@ import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
-
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from '../auth/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -28,11 +29,13 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
     
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MatDividerModule,
     MatToolbarModule,
     MatIconModule,
@@ -52,7 +55,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
     
   ]
 })
