@@ -9,6 +9,14 @@ export class AuthService {
   
   constructor(private http: HttpClient) { }
 
+  register(email: string, password: string){
+    const authData: AuthData = {email: email, password: password}
+    this.http.post("http://localhost:3000/api/user/register", authData)
+    .subscribe(response => {
+      console.log(response);
+    });
+  }
+
   login(email: string, password: string){
     const authData: AuthData = {email: email, password: password}
     this.http.post("http://localhost:3000/api/user/login", authData)
