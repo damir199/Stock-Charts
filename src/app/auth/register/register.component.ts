@@ -13,14 +13,14 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   isLoading = false;
 
   onRegister(form: NgForm){
     if(form.invalid){
       return;
     }
-    this.authService.login(form.value.email, form.value.password);
+    this.authService.register(form.value.email, form.value.password);
    }
 
 }

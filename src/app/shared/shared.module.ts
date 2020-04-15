@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoginComponent } from '../auth/login/login.component';
+import { RegisterComponent } from '../auth/register/register.component';
 import { RouterModule } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
@@ -19,8 +21,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { FormsModule } from '@angular/forms';
-import { RegisterComponent } from '../auth/register/register.component';
-import { HttpClientModule } from '@angular/common/http';
 
 
 
