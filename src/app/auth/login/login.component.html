@@ -1,19 +1,43 @@
 <div>
-<mat-card>
+  <mat-card>
     <mat-spinner *ngIf="isLoading"></mat-spinner>
     <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
-        <mat-form-field>
-            <input matInput name="email" ngModel type="email" placeholder="Email" #emailInput="ngModel" required email>
-            <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-            <input matInput name="password" ngModel type="password" placeholder="Password" #passwordInput="ngModel" required password> 
-            <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
-        </mat-form-field>
-        <br>
-        <button mat-raised-button color="accent" type="submit">Login</button>
+      <mat-form-field>
+        <input
+          matInput
+          name="email"
+          ngModel
+          type="email"
+          placeholder="Email"
+          #emailInput="ngModel"
+          required
+          email
+        />
+        <mat-error *ngIf="emailInput.invalid"
+          >Please enter a valid email.</mat-error
+        >
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <input
+          matInput
+          name="password"
+          ngModel
+          type="password"
+          placeholder="Password"
+          #passwordInput="ngModel"
+          required
+          password
+        />
+        <mat-error *ngIf="passwordInput.invalid"
+          >Please enter a valid password.</mat-error
+        >
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="accent" type="submit">Login</button>
     </form>
-</mat-card>
+    <mat-card-actions>
+      <button mat-button routerLink= "/register">Register</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-
