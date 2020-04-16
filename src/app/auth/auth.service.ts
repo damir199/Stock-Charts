@@ -19,6 +19,10 @@ export class AuthService {
     return this.token;
   }
 
+  getisAuth() {
+    return this.isAuthenticated;
+  }
+
   getAuthStatusListener() {
     return this.authStatusListener.asObservable();
   }
@@ -46,7 +50,6 @@ export class AuthService {
         this.token = token;
         if (token) {
           this.isAuthenticated = true;
-
           this.authStatusListener.next(true);
           this.router.navigate(["/"]);
         }
