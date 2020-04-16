@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
+    this.userAuthenticated = this.authService.getisAuth();
     this.authListenerSubs = this.authService
       .getAuthStatusListener()
       .subscribe((isAuthenticated) => {

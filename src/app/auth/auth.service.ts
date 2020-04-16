@@ -67,6 +67,9 @@ export class AuthService {
 
   autoAuthUser() {
     const authInfo = this.getAuthData();
+    if (!authInfo) {
+      return;
+    }
     const now = new Date();
     const expiresIn = authInfo.expirationDate.getTime() - now.getTime();
     if (expiresIn > 0) {
@@ -82,10 +85,11 @@ export class AuthService {
     this.authStatusListener.next(false);
     clearTimeout(this.tokenTimer);
     this.router.navigate(["login"]);
+    this.clearAuthData();
   }
 
   private setAuthTimer(duration: number) {
-    console.log("setting timer" + duration);
+    console.log("setting timer: " + duration);
     this.tokenTimer = setTimeout(() => {
       this.logout();
     }, duration * 1000);
@@ -98,7 +102,7 @@ export class AuthService {
 
   private clearAuthData() {
     localStorage.removeItem("token");
-    localStorage.removeitem("expiration");
+    localStorage.removeItem("expiration");
   }
 
   private getAuthData() {

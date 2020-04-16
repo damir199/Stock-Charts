@@ -20,10 +20,12 @@ export class DefaultComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.authStatusSub = this.authService.getAuthStatusListener()
-    .subscribe(isAuthenticated => {
-      this.userAuthenticated = isAuthenticated;
-    });
+    this.userAuthenticated = this.authService.getisAuth();
+    this.authStatusSub = this.authService
+      .getAuthStatusListener()
+      .subscribe((isAuthenticated) => {
+        this.userAuthenticated = isAuthenticated;
+      });
   }
 
   ngOnDestroy() {
