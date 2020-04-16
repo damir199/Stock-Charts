@@ -23,10 +23,14 @@
                         <mat-icon>person_outline</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                      <button mat-menu-item routerLink="/login">
+                      <button mat-menu-item routerLink="/login" *ngIf="!userAuthenticated">
                           <mat-icon>exit_to_app</mat-icon>
                           Login
                       </button>
+                      <button mat-menu-item (click)="onLogout()" *ngIf="userAuthenticated">
+                        <mat-icon>exit_to_app</mat-icon>
+                        Logout
+                    </button>
                     
                     </mat-menu>
                  </li>
