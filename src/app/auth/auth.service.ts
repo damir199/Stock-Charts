@@ -49,27 +49,30 @@ export class AuthService {
         "http://localhost:3000/api/users/login",
         authData
       )
-      .subscribe((response) => {
-        //creating a constant of 'token' to hold the 'token' from the response.
-        const token = response.token;
-        //set the 'token' of this request to the retrieved 'token' that's in the const now.
-        this.token = token;
-        if (token) {
-          const expiresInDuration = response.expiresIn;
-          this.setAuthTimer(expiresInDuration);
-          this.isAuthenticated = true;
-          this.authStatusListener.next(true);
-          const now = new Date();
-          const expirationDate = new Date(
-            now.getTime() + expiresInDuration * 1000
-          );
-          console.log(expirationDate);
-          this.saveAuthData(token, expirationDate);
-          this.router.navigate(["/"]);
+      .subscribe(
+        (response) => {
+          //creating a constant of 'token' to hold the 'token' from the response.
+          const token = response.token;
+          //set the 'token' of this request to the retrieved 'token' that's in the const now.
+          this.token = token;
+          if (token) {
+            const expiresInDuration = response.expiresIn;
+            this.setAuthTimer(expiresInDuration);
+            this.isAuthenticated = true;
+            this.authStatusListener.next(true);
+            const now = new Date();
+            const expirationDate = new Date(
+              now.getTime() + expiresInDuration * 1000
+            );
+            console.log(expirationDate);
+            this.saveAuthData(token, expirationDate);
+            this.router.navigate(["/"]);
+          }
+        },
+        (error) => {
+          this.authStatusListener.next(false);
         }
-      }, error => {
-        this.authStatusListener.next(false);
-      });
+      );
   }
 
   autoAuthUser() {
