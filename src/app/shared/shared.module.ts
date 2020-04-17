@@ -36,6 +36,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HttpClientModule,
+    RouterModule,
     MatDividerModule,
     MatToolbarModule,
     MatIconModule,
@@ -44,10 +45,9 @@ import { FormsModule } from '@angular/forms';
     MatMenuModule,
     MatListModule,
     MatInputModule,
-    FormsModule,
-    RouterModule,
     MatProgressSpinnerModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
   
 
   ],

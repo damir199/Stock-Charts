@@ -30,11 +30,16 @@ export class AuthService {
 
   register(email: string, password: string) {
     const authData: AuthData = { email: email, password: password };
-    this.http
+    return this.http
       .post("http://localhost:3000/api/users/register", authData)
-      .subscribe((response) => {
-        console.log(response);
-      });
+      .subscribe(
+        () => {
+          this.router.navigate(["/"]);
+        },
+        (error) => {
+          this.authStatusListener.next(false);
+        }
+      );
   }
 
   login(email: string, password: string) {
@@ -62,6 +67,8 @@ export class AuthService {
           this.saveAuthData(token, expirationDate);
           this.router.navigate(["/"]);
         }
+      }, error => {
+        this.authStatusListener.next(false);
       });
   }
 
@@ -79,6 +86,7 @@ export class AuthService {
       this.authStatusListener.next(true);
     }
   }
+
   logout() {
     this.token = null;
     this.isAuthenticated = false;

@@ -1,11 +1,8 @@
-<div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div *ngIf="!isLoading">
   <mat-card>
-    
-    <form
-      (submit)="onRegister(registerForm)"
-      #registerForm="ngForm"
-  
-    >
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit)="onRegister(registerForm)" #registerForm="ngForm">
       <mat-form-field>
         <input
           matInput
