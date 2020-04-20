@@ -20,14 +20,18 @@ import { MatListModule } from "@angular/material/list";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { FormsModule } from "@angular/forms";
+import { CardComponent } from "./widgets/card/card.component";
+import { DashboardComponent } from "../modules/dashboard/dashboard.component";
 
 @NgModule({
   declarations: [
+    DashboardComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
     LoginComponent,
     RegisterComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +55,8 @@ import { FormsModule } from "@angular/forms";
     SidebarComponent,
     LoginComponent,
     RegisterComponent,
+    CardComponent,
+    DashboardComponent,
   ],
 })
 export class SharedModule {}
