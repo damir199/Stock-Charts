@@ -17,11 +17,13 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatListModule } from "@angular/material/list";
+import { MatDialogModule } from "@angular/material/dialog";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { FormsModule } from "@angular/forms";
 import { CardComponent } from "./widgets/card/card.component";
 import { DashboardComponent } from "../modules/dashboard/dashboard.component";
+import { ErrorComponent } from '../error/error/error.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { DashboardComponent } from "../modules/dashboard/dashboard.component";
     LoginComponent,
     RegisterComponent,
     CardComponent,
+    ErrorComponent
   ],
   imports: [
     CommonModule,
@@ -47,16 +50,19 @@ import { DashboardComponent } from "../modules/dashboard/dashboard.component";
     MatInputModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatDialogModule,
     FormsModule,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    ErrorComponent,
     LoginComponent,
     RegisterComponent,
     CardComponent,
     DashboardComponent,
+   
   ],
 })
 export class SharedModule {}

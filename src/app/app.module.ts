@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { ErrorInterceptor } from "../app/error-interceptor";
+import { ErrorComponent } from './error/error/error.component';
 
 
 
@@ -15,15 +16,18 @@ import { ErrorInterceptor } from "../app/error-interceptor";
 @NgModule({
   declarations: [
     AppComponent,
+   
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule
+    DefaultModule,
+    
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true } ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ErrorComponent]
 })
 export class AppModule { }
