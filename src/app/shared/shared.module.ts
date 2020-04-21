@@ -23,7 +23,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
 import { CardComponent } from "./widgets/card/card.component";
 import { DashboardComponent } from "../modules/dashboard/dashboard.component";
-import { ErrorComponent } from '../error/error/error.component';
+import { ErrorComponent } from "../error/error/error.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { ErrorComponent } from '../error/error/error.component';
     LoginComponent,
     RegisterComponent,
     CardComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     CommonModule,
@@ -62,7 +62,7 @@ import { ErrorComponent } from '../error/error/error.component';
     RegisterComponent,
     CardComponent,
     DashboardComponent,
-   
+    ErrorComponent,
   ],
 })
 export class SharedModule {}
