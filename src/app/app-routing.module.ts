@@ -1,12 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { LoginComponent } from "./auth/login/login.component";
+
 import { DefaultComponent } from "./layouts/default/default.component";
 import { DashboardComponent } from "./modules/dashboard/dashboard.component";
-import { ProfileComponent } from "./components/profile/profile.component";
-import { ChartsComponent } from "./components/charts/charts.component";
-import { AccountsComponent } from "./components/accounts/accounts.component";
 import { RegisterComponent } from "./auth/register/register.component";
+import { LoginComponent } from "./auth/login/login.component";
+
+import { SalesComponent } from "./components/sales/sales.component";
+import { StaffComponent } from "./components/staff/staff.component";
+import { StoresComponent } from "./components/stores/stores.component";
+
 import { AuthGuard } from "./auth/auth.guard";
 
 const routes: Routes = [
@@ -20,18 +23,18 @@ const routes: Routes = [
         canActivate: [AuthGuard],
       },
       {
-        path: "profile",
-        component: ProfileComponent,
+        path: "staff",
+        component: StaffComponent,
         canActivate: [AuthGuard],
       },
       {
-        path: "charts",
-        component: ChartsComponent,
+        path: "sales",
+        component: SalesComponent,
         canActivate: [AuthGuard],
       },
       {
-        path: "accounts",
-        component: AccountsComponent,
+        path: "stores",
+        component: StoresComponent,
         canActivate: [AuthGuard],
       },
       {

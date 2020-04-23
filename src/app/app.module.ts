@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { ErrorInterceptor } from "../app/error-interceptor";
 import { ErrorComponent } from './error/error/error.component';
+import { StaffComponent } from './components/staff/staff.component';
+import { SalesComponent } from './components/sales/sales.component';
+import { StoresComponent } from './components/stores/stores.component';
 
 
 
@@ -16,6 +19,9 @@ import { ErrorComponent } from './error/error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
+    StaffComponent,
+    SalesComponent,
+    StoresComponent,
    
 
   ],
