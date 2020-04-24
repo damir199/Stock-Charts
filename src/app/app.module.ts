@@ -8,22 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { ErrorInterceptor } from "../app/error-interceptor";
 import { ErrorComponent } from './error/error/error.component';
-import { StaffComponent } from './components/staff/staff.component';
-import { SalesComponent } from './components/sales/sales.component';
-import { StoresComponent } from './components/stores/stores.component';
-
-
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    StaffComponent,
-    SalesComponent,
-    StoresComponent,
-   
-
   ],
   imports: [
     BrowserModule,
@@ -32,7 +20,7 @@ import { StoresComponent } from './components/stores/stores.component';
     DefaultModule,
     
   ],
-  providers: [ { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true } ],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true } ],
   bootstrap: [AppComponent],
   entryComponents: [ErrorComponent]
 })

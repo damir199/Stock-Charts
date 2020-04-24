@@ -15,6 +15,8 @@ import { CardComponent } from "./widgets/card/card.component";
 import { DashboardComponent } from "../modules/dashboard/dashboard.component";
 import { ErrorComponent } from "../error/error/error.component";
 import { AngularMaterialModule } from "../modules/angular-material/angular-material.module";
+import { StoresComponent } from '../components/stores/stores.component';
+import { SalesComponent } from '../components/sales/sales.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { AngularMaterialModule } from "../modules/angular-material/angular-mater
     RegisterComponent,
     CardComponent,
     ErrorComponent,
+    SalesComponent
   ],
   imports: [
     CommonModule,
@@ -45,6 +48,7 @@ import { AngularMaterialModule } from "../modules/angular-material/angular-mater
     CardComponent,
     DashboardComponent,
     ErrorComponent,
+    SalesComponent
   ],
 })
 export class SharedModule {}
