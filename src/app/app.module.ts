@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { ErrorInterceptor } from "../app/error-interceptor";
 import { ErrorComponent } from './error/error/error.component';
+import { LoyverseInterceptor } from './loyverse-interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ErrorComponent } from './error/error/error.component';
     DefaultModule,
     
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true } ],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: LoyverseInterceptor, multi: true } ],
   bootstrap: [AppComponent],
   entryComponents: [ErrorComponent]
 })

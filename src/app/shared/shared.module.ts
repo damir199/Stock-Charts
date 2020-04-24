@@ -15,7 +15,6 @@ import { CardComponent } from "./widgets/card/card.component";
 import { DashboardComponent } from "../modules/dashboard/dashboard.component";
 import { ErrorComponent } from "../error/error/error.component";
 import { AngularMaterialModule } from "../modules/angular-material/angular-material.module";
-import { StoresComponent } from '../components/stores/stores.component';
 import { SalesComponent } from '../components/sales/sales.component';
 
 @NgModule({

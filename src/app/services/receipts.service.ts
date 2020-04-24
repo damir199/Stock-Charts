@@ -6,7 +6,7 @@ import { Receipt } from "../models/receipt.model";
   providedIn: "root",
 })
 export class ReceiptsService {
-  private receipts: Receipt[] = [];
+  public receipts: Receipt[] = [];
 
   constructor(private http: HttpClient) {}
 
