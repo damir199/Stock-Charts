@@ -1,21 +1,26 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Receipt } from "../models/receipt.model";
+import { IPost } from "../interfaces/post"
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: "root",
 })
+
 export class ReceiptsService {
-  public receipts: Receipt[] = [];
+  
+  constructor(private http: HttpClient) {
+  }
+  
+  getAllPosts(): Observable<IPost[]>{
 
-  constructor(private http: HttpClient) {}
+  return this.http.get<IPost[]>
+  ("https://api.loyverse.com/v0.7")
+  
 
-  getReceipts() {
-   this.http.get<Receipt[]>("https://api.loyverse.com/v0.7/receipts/")
-   .subscribe((receiptData) => {
-    this.receipts = receiptData;
-   });
   }
 
+  
   
 }

@@ -1,20 +1,12 @@
-<mat-card *ngFor="let receipt of receipts">
+<div  fxLayout="row wrap" fxLayoutGap="5px">
+<mat-card fxFlex="25" *ngFor="let post of posts" >
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title> Store ID</mat-card-title>
-    <mat-card-subtitle>Receipt Number</mat-card-subtitle>
+    <mat-card-title> {{ post.title }} </mat-card-title>
+    <mat-card-subtitle>Post ID: {{post.id}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <h3>Receipt Type</h3>
-    <p>Cash</p>
-    <h3>Employee ID</h3>
-    <p>111-111-111-111</p>
-    <h3>POS ID</h3>
-    <p>POS_1</p>
-    <h3>Total</h3>
-    <p>$230</p>
-    <h3>TAX</h3>
-    <p>$20</p>
+    <p>{{ post.body }}</p>
+    <br />
   </mat-card-content>
   <mat-card-actions>
     <button mat-button color="primary">PRINT</button>
@@ -22,3 +14,4 @@
     <button mat-button>BACK</button>
   </mat-card-actions>
 </mat-card>
+</div>

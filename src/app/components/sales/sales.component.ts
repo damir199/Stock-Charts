@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Receipt } from "/Users/damirpasic/Documents/Stock-Charts/src/app/models/receipt.model";
-import { ReceiptsService } from "src/app/services/receipts.service";
+import { Receipt } from "src/app/models/receipt.model";
+import { PostService } from "src/app/services/post.service";
 
 @Component({
   selector: "app-sales",
@@ -8,10 +8,13 @@ import { ReceiptsService } from "src/app/services/receipts.service";
   styleUrls: ["./sales.component.scss"],
 })
 export class SalesComponent implements OnInit {
-  @Input() receipts: Receipt[] = [];
-  constructor(public receiptsService: ReceiptsService) {}
+  public posts  = [];
+  constructor(public postService: PostService) {}
 
   ngOnInit() {
-    this.receiptsService.getReceipts();
+
+    
+    this.postService.getAllPosts().subscribe(
+      data => this.posts = data);
   }
 }
