@@ -7,9 +7,11 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { LoginComponent } from "../auth/login/login.component";
 import { RegisterComponent } from "../auth/register/register.component";
+import { SearchBarComponent } from "src/app/shared/components/search-bar/search-bar.component";
 
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+import { ReactiveFormsModule } from "@angular/forms/";
 import { FormsModule } from "@angular/forms";
 import { CardComponent } from "./widgets/card/card.component";
 import { DashboardComponent } from "../modules/dashboard/dashboard.component";
@@ -27,7 +29,8 @@ import { SalesComponent } from '../components/sales/sales.component';
     RegisterComponent,
     CardComponent,
     ErrorComponent,
-    SalesComponent
+    SalesComponent,
+    SearchBarComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,7 @@ import { SalesComponent } from '../components/sales/sales.component';
     AngularMaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,
@@ -47,7 +51,8 @@ import { SalesComponent } from '../components/sales/sales.component';
     CardComponent,
     DashboardComponent,
     ErrorComponent,
-    SalesComponent
+    SalesComponent,
+    SearchBarComponent
   ],
 })
 export class SharedModule {}

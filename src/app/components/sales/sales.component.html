@@ -1,17 +1,20 @@
-<div  fxLayout="row wrap" fxLayoutGap="5px">
-<mat-card fxFlex="25" *ngFor="let post of posts" >
-  <mat-card-header>
-    <mat-card-title> {{ post.title }} </mat-card-title>
-    <mat-card-subtitle>Post ID: {{post.id}}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <p>{{ post.body }}</p>
-    <br />
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button color="primary">PRINT</button>
-    <button mat-button color="accent">SAVE</button>
-    <button mat-button>BACK</button>
-  </mat-card-actions>
-</mat-card>
+<div style="margin:auto; width: 70%; margin-top: 30px;">
+  <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
+</div>
+<div class="card" fxFlex fxLayout="row wrap" fxLayoutGap="5px"  fxLayoutAlign="center stretch">
+  <mat-card  *ngFor="let post of posts" fxFlex="25" >
+    <mat-card-header>
+      <mat-card-title>{{ post.id }} </mat-card-title>
+      <mat-card-subtitle>{{ post.title }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ post.body }}</p>
+     
+    </mat-card-content>
+    <mat-card-actions >
+      <button mat-button color="primary">PRINT</button>
+      <button mat-button color="accent">SAVE</button>
+      <button mat-button>BACK</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

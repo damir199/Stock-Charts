@@ -12,20 +12,16 @@ import { Observable } from "rxjs";
 @Injectable()
 export class LoyverseInterceptor implements HttpInterceptor {
   constructor() {}
-  intercept(
-    req: HttpRequest<any>,
-    next: HttpHandler
-  ): Observable<HttpEvent<any>> {
-    const headers = new HttpHeaders({
-      "Content-Type": ["application/json", "application/json"],
-      "Allow-Access-Control-Origin": "*",
-      Authorization: "Bearer e94aa48bb1354481a91b2182aaac0f31",
-    });
-
-    const clone = req.clone({
-      headers: headers,
-    });
-
-    return next.handle(clone);
-  }
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+     const loyreq = req.clone({
+        setHeaders: {
+          'Content-Type' : 'application/json; charset=utf-8',
+          'Accept'       : 'application/json',
+          'Access-Control-Allow-Origin' : '*',
+          'Authorization': `Bearer 89413ca9050744caa542006c7ffbe835`,
+        },
+      });
+  
+      return next.handle(loyreq);
+    }
 }
