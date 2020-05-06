@@ -1,6 +1,7 @@
-<div style="margin:auto; width: 70%; margin-top: 30px;">
+<div class="searchbar" fxLayout="column" style=" width: 70%; margin-top: 30px;"  fxLayoutAlign="center stretch">
   <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
 </div>
+
 <div class="card" fxFlex fxLayout="row wrap" fxLayoutGap="5px"  fxLayoutAlign="center stretch">
   <mat-card  *ngFor="let post of posts" fxFlex="25" >
     <mat-card-header>

@@ -26,8 +26,6 @@ export class SalesComponent implements OnInit {
   }
 
   ngOnInit() {
-  //this.storeService.getAllStores().subscribe(
-  //data => this.stores = data);
   this.postService.getAllPosts().subscribe(
     posts => {
       this.posts = posts;
