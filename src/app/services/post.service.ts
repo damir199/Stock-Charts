@@ -19,6 +19,7 @@ export class PostService {
   filteredListOptions() {
     let posts = this.postsData;
         let filteredPostsList = [];
+    
         for (let post of posts) {
             for (let options of this.searchOption) {
                 if (options.title === post.title) {

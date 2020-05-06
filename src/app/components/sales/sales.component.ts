@@ -29,7 +29,10 @@ export class SalesComponent implements OnInit {
   //this.storeService.getAllStores().subscribe(
   //data => this.stores = data);
   this.postService.getAllPosts().subscribe(
-    data => this.posts = data,
+    posts => {
+      this.posts = posts;
+      this.postService.postsData = posts;
+    }
     );
 
 
