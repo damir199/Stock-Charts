@@ -13,11 +13,11 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { ReactiveFormsModule } from "@angular/forms/";
 import { FormsModule } from "@angular/forms";
-import { CardComponent } from "./widgets/card/card.component";
 import { DashboardComponent } from "../modules/dashboard/dashboard.component";
 import { ErrorComponent } from "../error/error/error.component";
 import { AngularMaterialModule } from "../modules/angular-material/angular-material.module";
-import { SalesComponent } from '../components/sales/sales.component';
+import { SalesComponent } from "../components/sales/sales.component";
+import { ReceiptComponent } from "../components/receipt/receipt.component";
 
 @NgModule({
   declarations: [
@@ -27,10 +27,10 @@ import { SalesComponent } from '../components/sales/sales.component';
     SidebarComponent,
     LoginComponent,
     RegisterComponent,
-    CardComponent,
     ErrorComponent,
     SalesComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ReceiptComponent,
   ],
   imports: [
     CommonModule,
@@ -39,7 +39,7 @@ import { SalesComponent } from '../components/sales/sales.component';
     AngularMaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     HeaderComponent,
@@ -48,11 +48,11 @@ import { SalesComponent } from '../components/sales/sales.component';
     ErrorComponent,
     LoginComponent,
     RegisterComponent,
-    CardComponent,
     DashboardComponent,
     ErrorComponent,
     SalesComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ReceiptComponent,
   ],
 })
 export class SharedModule {}

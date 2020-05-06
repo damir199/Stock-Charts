@@ -10,7 +10,7 @@ import { ErrorInterceptor } from "../app/error-interceptor";
 import { ErrorComponent } from "./error/error/error.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
