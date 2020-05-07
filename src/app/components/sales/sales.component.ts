@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { PostService } from "src/app/services/post.service";
-//import { StoreService } from "src/app/services/store.service";
 
 
 @Component({
@@ -10,7 +9,6 @@ import { PostService } from "src/app/services/post.service";
 })
 export class SalesComponent implements OnInit {
   public posts  = [];
-  public stores = [];
   constructor(public postService: PostService) {}
 
   isLoading = false;
@@ -23,6 +21,11 @@ export class SalesComponent implements OnInit {
     else {
       this.posts = this.postService.postsData;
     }
+  }
+
+  viewReceipt() {
+    
+
   }
 
   ngOnInit() {

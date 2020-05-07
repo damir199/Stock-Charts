@@ -11,6 +11,7 @@ import { StaffComponent } from "./components/staff/staff.component";
 import { StoresComponent } from "./components/stores/stores.component";
 
 import { AuthGuard } from "./auth/auth.guard";
+import { ReceiptComponent } from "./components/receipt/receipt.component";
 
 const routes: Routes = [
   {
@@ -35,6 +36,11 @@ const routes: Routes = [
       {
         path: "stores",
         component: StoresComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: "sales/:id",
+        component: ReceiptComponent,
         canActivate: [AuthGuard],
       },
       {
