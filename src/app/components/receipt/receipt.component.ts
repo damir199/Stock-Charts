@@ -15,11 +15,12 @@ export class ReceiptComponent implements OnInit {
   constructor(public postService: PostService, public route: ActivatedRoute) {}
 
   ngOnInit() {
-    // this.postService
+    // Retrieves the id of the post(to be receipt) i want to show in the 'view receipt' component.
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       this.postId = paramMap.get("id");
-      console.log(this.postId);
     });
+    if(this.postId != null){
     this.post = this.postService.getPost(this.postId);
+    }
   }
 }

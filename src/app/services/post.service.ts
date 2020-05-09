@@ -31,7 +31,6 @@ export class PostService {
                 }
             }
         }
-        console.log(filteredPostsList);
         return filteredPostsList;
   }
 }

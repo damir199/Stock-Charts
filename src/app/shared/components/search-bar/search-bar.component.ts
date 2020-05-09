@@ -24,6 +24,7 @@ export class SearchBarComponent implements OnInit {
 
 
   ngOnInit(){
+    
      // get all the post
      this.postService.getAllPosts().subscribe(posts => {
       this.allPosts = posts
