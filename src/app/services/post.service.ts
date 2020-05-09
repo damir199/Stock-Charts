@@ -12,6 +12,10 @@ export class PostService {
   searchOption=[]
   public postsData: IPost[] 
 
+  getPost(id: string){
+    return {...this.postsData.find(p => p.id == id)}
+  }
+
   getAllPosts(): Observable<IPost[]> {
     return this.http.get<IPost[]>("https://jsonplaceholder.typicode.com/posts");
   }

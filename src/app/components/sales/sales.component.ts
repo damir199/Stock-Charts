@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output } from "@angular/core";
 import { PostService } from "src/app/services/post.service";
+import { EventEmitter } from 'events';
 
 
 @Component({
@@ -9,6 +10,8 @@ import { PostService } from "src/app/services/post.service";
 })
 export class SalesComponent implements OnInit {
   public posts  = [];
+  @Output() idEventEmitter  = new EventEmitter();
+
   constructor(public postService: PostService) {}
 
   isLoading = false;
@@ -23,10 +26,7 @@ export class SalesComponent implements OnInit {
     }
   }
 
-  viewReceipt() {
-    
-
-  }
+  
 
   ngOnInit() {
   this.postService.getAllPosts().subscribe(
