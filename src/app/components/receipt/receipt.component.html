@@ -1,4 +1,6 @@
-<mat-card class="example-card">
+
+<div fxLayout="row" fxLayoutAlign="space-around center">
+<mat-card class="receipt-card" >
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{ post.id }}</mat-card-title>
@@ -8,7 +10,8 @@
     <p>{{ post.body }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <button mat-button routerLink="/sales">BACK</button>
+    <button mat-button>PRINT</button>
   </mat-card-actions>
 </mat-card>
+</div>
