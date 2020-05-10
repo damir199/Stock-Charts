@@ -21,27 +21,23 @@ const routes: Routes = [
       {
         path: "",
         component: DashboardComponent,
-        canActivate: [AuthGuard],
       },
       {
         path: "staff",
         component: StaffComponent,
-        canActivate: [AuthGuard],
       },
       {
         path: "sales",
         component: SalesComponent,
-        canActivate: [AuthGuard],
       },
       {
         path: "stores",
         component: StoresComponent,
-        canActivate: [AuthGuard],
       },
       {
         path: "sales/:id",
         component: ReceiptComponent,
-        canActivate: [AuthGuard],
+        
       },
       {
         path: "login",
