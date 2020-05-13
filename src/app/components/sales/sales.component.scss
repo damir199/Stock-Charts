@@ -1,25 +1,16 @@
-
-
-.content{
-    padding-bottom: 3em;
+.content1 {
+  display: block;
+  padding-bottom: 3em;
+}
+.content2 {
+  display: block;
+  padding-bottom: 3em;
 }
 mat-card {
-    height: auto;
-    margin-top: 1em;
-}
-.card{
-   
-    margin-top: 10em;
-   
-   
-}
-.searchbar{
-  padding-left: 13em;
-    position: absolute;
-   
-  
-
+  height: auto;
+  margin-top: 1em;
 }
 
-
-
+.wrapper {
+  text-align: center;
+}
