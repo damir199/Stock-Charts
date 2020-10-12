@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatInputModule } from "@angular/material/input";
@@ -11,7 +11,6 @@ import { MatListModule } from "@angular/material/list";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatChipsModule } from "@angular/material/chips";
-
 
 @NgModule({
   declarations: [],
@@ -28,11 +27,6 @@ import { MatChipsModule } from "@angular/material/chips";
     MatDialogModule,
     MatChipsModule,
     MatAutocompleteModule,
-    
-
-  ]
+  ],
 })
-export class AngularMaterialModule { 
-
-
-}
+export class AngularMaterialModule {}

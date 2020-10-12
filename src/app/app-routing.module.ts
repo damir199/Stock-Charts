@@ -12,6 +12,7 @@ import { StoresComponent } from "./components/stores/stores.component";
 
 import { AuthGuard } from "./auth/auth.guard";
 import { ReceiptComponent } from "./components/receipt/receipt.component";
+import { WorkshopComponent } from "./components/workshop/workshop.component";
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        component: DashboardComponent,
+        component: WorkshopComponent,
       },
       {
         path: "staff",
@@ -37,7 +38,6 @@ const routes: Routes = [
       {
         path: "sales/:id",
         component: ReceiptComponent,
-        
       },
       {
         path: "login",

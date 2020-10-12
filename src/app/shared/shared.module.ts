@@ -11,10 +11,15 @@ import { SearchBarComponent } from "src/app/shared/components/search-bar/search-
 
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+import { DragDropModule } from "@angular/cdk/drag-drop";
+import { moveItemInArray } from "@angular/cdk/drag-drop";
+import { transferArrayItem } from "@angular/cdk/drag-drop";
+
 import { ReactiveFormsModule } from "@angular/forms/";
 import { FormsModule } from "@angular/forms";
 import { DashboardComponent } from "../modules/dashboard/dashboard.component";
 import { ErrorComponent } from "../error/error/error.component";
+import { WorkshopComponent } from "../components/workshop/workshop.component";
 import { AngularMaterialModule } from "../modules/angular-material/angular-material.module";
 import { SalesComponent } from "../components/sales/sales.component";
 import { ReceiptComponent } from "../components/receipt/receipt.component";
@@ -22,6 +27,7 @@ import { ReceiptComponent } from "../components/receipt/receipt.component";
 @NgModule({
   declarations: [
     DashboardComponent,
+    WorkshopComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
@@ -38,8 +44,10 @@ import { ReceiptComponent } from "../components/receipt/receipt.component";
     RouterModule,
     AngularMaterialModule,
     FlexLayoutModule,
+
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule,
   ],
   exports: [
     HeaderComponent,

@@ -1,0 +1,114 @@
+<div class="wrapper">
+  <div class="content">
+    <!-- This is the section for the lists containing the sections and units -->
+    <div class="example-container">
+      <h2>Chassis</h2>
+
+      <div
+        cdkDropList
+        #chassisList="cdkDropList"
+        [cdkDropListData]="chassis"
+        [cdkDropListConnectedTo]="[buildList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of chassis" cdkDrag>
+          {{ item }}
+          <mat-icon>double_arrow</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Build</h2>
+
+      <div
+        cdkDropList
+        #buildList="cdkDropList"
+        [cdkDropListData]="build"
+        [cdkDropListConnectedTo]="[chassisList, fitoutList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of build" cdkDrag>
+          {{ item }}
+          <mat-icon>double_arrow</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Fit-Out</h2>
+
+      <div
+        cdkDropList
+        #fitoutList="cdkDropList"
+        [cdkDropListData]="fitout"
+        [cdkDropListConnectedTo]="[buildList, trimList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of fitout" cdkDrag>
+          {{ item }}
+          <mat-icon>double_arrow</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="example-container">
+      <h2>Trim</h2>
+
+      <div
+        cdkDropList
+        #trimList="cdkDropList"
+        [cdkDropListData]="trim"
+        [cdkDropListConnectedTo]="[fitoutList, sprayList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of trim" cdkDrag>
+          {{ item }}
+          <mat-icon>double_arrow</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Spray</h2>
+
+      <div
+        cdkDropList
+        #sprayList="cdkDropList"
+        [cdkDropListData]="spray"
+        [cdkDropListConnectedTo]="[fitoutList, trimList, finishList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of spray" cdkDrag>
+          {{ item }}
+          <mat-icon>double_arrow</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Finish</h2>
+
+      <div
+        cdkDropList
+        #finishList="cdkDropList"
+        [cdkDropListData]="finish"
+        [cdkDropListConnectedTo]="[sprayList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of finish" cdkDrag>
+          {{ item }}
+          <mat-icon>double_arrow</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content END-->
+  </div>
+  <!-- Outer Wrapper END-->
+</div>
