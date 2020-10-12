@@ -11,6 +11,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatChipsModule } from "@angular/material/chips";
+import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   declarations: [],
@@ -27,6 +28,7 @@ import { MatChipsModule } from "@angular/material/chips";
     MatDialogModule,
     MatChipsModule,
     MatAutocompleteModule,
+    MatExpansionModule,
   ],
 })
 export class AngularMaterialModule {}
