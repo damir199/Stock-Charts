@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { CdkDragDrop } from "@angular/cdk/drag-drop";
 import { moveItemInArray } from "@angular/cdk/drag-drop";
 import { transferArrayItem } from "@angular/cdk/drag-drop";
+import { AuthService } from "src/app/auth/auth.service";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-workshop",
@@ -10,6 +12,8 @@ import { transferArrayItem } from "@angular/cdk/drag-drop";
 })
 export class WorkshopComponent implements OnInit {
   panelOpenState = false;
+  userAuthenticated = false;
+  private authListenerSubs: Subscription;
 
   chassis = ["J6321", "J6322", "J6323"];
   build = ["J6324", "J6325"];
@@ -34,7 +38,14 @@ export class WorkshopComponent implements OnInit {
       );
     }
   }
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.userAuthenticated = this.authService.getisAuth();
+    this.authListenerSubs = this.authService
+      .getAuthStatusListener()
+      .subscribe((isAuthenticated) => {
+        this.userAuthenticated = isAuthenticated;
+      });
+  }
 }
