@@ -21,7 +21,9 @@
                   {{ item }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Axle</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Hydraulics</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Floor</mat-checkbox>
             </mat-expansion-panel>
           </mat-accordion>
           <mat-icon>double_arrow</mat-icon>
@@ -41,14 +43,16 @@
         (cdkDropListDropped)="drop($event)"
       >
         <div class="example-box" *ngFor="let item of build" cdkDrag>
-          <mat-accordion>
+          <mat-accordion class="acc">
             <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   {{ item }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <p>This is the primary content of the panel.</p>
+              <mat-checkbox class="checkboxpad">Seats</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Walls</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Partitions</mat-checkbox>
             </mat-expansion-panel>
           </mat-accordion>
           <mat-icon>double_arrow</mat-icon>
@@ -68,14 +72,17 @@
         (cdkDropListDropped)="drop($event)"
       >
         <div class="example-box" *ngFor="let item of fitout" cdkDrag>
-          <mat-accordion>
+          <mat-accordion class="acc">
             <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   {{ item }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <p>This is the primary content of the panel.</p>
+              <mat-checkbox class="checkboxpad">Back</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Office</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Canteen</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Generator</mat-checkbox>
             </mat-expansion-panel>
           </mat-accordion>
 
@@ -95,14 +102,15 @@
         (cdkDropListDropped)="drop($event)"
       >
         <div class="example-box" *ngFor="let item of trim" cdkDrag>
-          <mat-accordion>
+          <mat-accordion class="acc">
             <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   {{ item }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <p>This is the primary content of the panel.</p>
+              <mat-checkbox class="checkboxpad">Trim</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Lifting Eyes</mat-checkbox>
             </mat-expansion-panel>
           </mat-accordion>
           <mat-icon>double_arrow</mat-icon>
@@ -122,14 +130,15 @@
         (cdkDropListDropped)="drop($event)"
       >
         <div class="example-box" *ngFor="let item of spray" cdkDrag>
-          <mat-accordion>
+          <mat-accordion class="acc">
             <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   {{ item }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <p>This is the primary content of the panel.</p>
+              <mat-checkbox class="checkboxpad">1st coat</mat-checkbox>
+              <mat-checkbox class="checkboxpad">2nd coat</mat-checkbox>
             </mat-expansion-panel>
           </mat-accordion>
           <mat-icon>double_arrow</mat-icon>
@@ -149,14 +158,19 @@
         (cdkDropListDropped)="drop($event)"
       >
         <div class="example-box" *ngFor="let item of finish" cdkDrag>
-          <mat-accordion>
+          <mat-accordion class="acc">
             <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   {{ item }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <p>This is the primary content of the panel.</p>
+              <mat-checkbox class="checkboxpad">Back</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Office</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Canteen</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Roof</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Lights</mat-checkbox>
+              <mat-checkbox class="checkboxpad">Stickers</mat-checkbox>
             </mat-expansion-panel>
           </mat-accordion>
           <mat-icon>double_arrow</mat-icon>
